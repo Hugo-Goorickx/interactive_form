@@ -10,7 +10,7 @@
 <body>
     <?php
         try {
-            $bdd = new PDO("mysql:host=localhost;dbname=test1", "root", "");
+            $bdd = new PDO("mysql:host=localhost;dbname=u716273791_me", "u716273791_hugoorickx", "8X=HB]mW&px");
             $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
         catch(PDOException $e) {
@@ -20,7 +20,7 @@
         if (isset($_POST['status']))
         {
             try {
-                $string = "UPDATE formulaire SET state_now = ".$_POST['status']." WHERE id=".$_POST['input'].";";
+                $string = "UPDATE test1 SET state_now = ".$_POST['status']." WHERE id=".$_POST['input'].";";
                 $bdd->query($string)->fetchAll(PDO::FETCH_ASSOC);
             }
             catch(PDOException $e) {
@@ -29,7 +29,7 @@
         }
 
         try {
-            $string = "SELECT id, nom, prenom, comment, email, state_now FROM `formulaire` WHERE 1;";
+            $string = "SELECT id, nom, prenom, comment, email, state_now FROM `test1` WHERE 1;";
             $resultat = $bdd->query($string)->fetchAll(PDO::FETCH_ASSOC);
         }
         catch(PDOException $e) {

@@ -107,8 +107,8 @@
             echo "<p>Formulaire valide</p>";
             try
             {
-                $string = "INSERT INTO formulaire (nom, prenom, email, comment) VALUES ('" . $name . "','" . $firstname . "','" . $email . "','" . $comment . "');";
-                $bdd = new PDO("mysql:host=localhost;dbname=test1", "root", "");
+                $string = "INSERT INTO test1 (nom, prenom, email, comment) VALUES ('" . $name . "','" . $firstname . "','" . $email . "','" . $comment . "');";
+                $bdd = new PDO("mysql:host=localhost;dbname=u716273791_me", "u716273791_hugoorickx", "8X=HB]mW&px");
                 $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 $query = $bdd->query($string);
                 $resultat = $query->fetchAll(PDO::FETCH_ASSOC);
