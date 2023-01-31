@@ -1,11 +1,18 @@
 <?php
+    session_start();
+
     ini_set( 'display_errors', 1 );
     error_reporting( E_ALL );
-    $from = "test@hostinger-tutorials.fr";
+
+    $_SESSION['name'] = $name;
+    $_SESSION['firstname'] = $firstname;
+    $_SESSION['email'] = $email;
+    $_SESSION['comment'] = $comment;
+
     $to = "hugoorickx@gmail.com";
-    $subject = "Essai de PHP Mail";
+    $subject = "Formulaire valide et envoye";
     $message = "PHP Mail fonctionne parfaitement";
-    $headers = "De :" . $from;
+    $headers = "De :" . $_SESSION['name'];
     mail($to,$subject,$message, $headers);
     echo "L'email a été envoyé.";
 ?>

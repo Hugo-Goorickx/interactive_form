@@ -9,6 +9,7 @@
 </head>
 <body>
     <?php
+        session_start();
         function filter_string_polyfill(string $string): string
         {
             $str = preg_replace('/\x00|<[^>]*>?/', '', $string);
@@ -88,7 +89,6 @@
                 <br><img src="captcha.php"/><br>
                 <input name="captcha" type="text" id="captcha">
                 <?php
-                    session_start();
                     echo ((isset($_POST["captcha"]) && $_SESSION["code"] != $_POST["captcha"] && $_POST["captcha"] != "")? "<p>Le code captcha entré ne correspond pas! Veuillez réessayer.</p>" :"");
                 ?>
             </p>
@@ -113,6 +113,10 @@
                 $query = $bdd->query($string);
                 $resultat = $query->fetchAll(PDO::FETCH_ASSOC);
                 echo "<p>Envoie du formulaire: valide</p>";
+                $_SESSION['name'] = $name;
+                $_SESSION['firstname'] = $firstname;
+                $_SESSION['email'] = $email;
+                $_SESSION['comment'] = $comment;
                 require("mail.php");
             }
             catch(PDOException $e) { echo "<p>Envoie du formulaire: echec</p>"; }
