@@ -1,0 +1,275 @@
+@import "https://fonts.googleapis.com/css?family=Dosis|Roboto:300,400";
+.container {
+  position: absolute;
+  top: 5vh;
+  left: 25vw;
+}
+.container form {
+  position: absolute;
+  text-align: center;
+  background: #fff;
+  width: 50vw;
+  height: 90vh;
+  max-width: 2000px;
+  border-radius: 5px;
+  padding: 30px 20px 0 20px;
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+}
+.container form p {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #87613d;
+  margin-bottom: 40px;
+}
+.container form p input {
+  outline: none !important;
+  border: none;
+  border-bottom: 1px solid #ffc185;
+  width: 85%;
+  font-family: "Roboto";
+  color: #ff7d00;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 100;
+  margin-bottom: 25px;
+}
+.container form button {
+  outline: none !important;
+}
+.container form button.form-btn {
+  position: absolute;
+  width: 50%;
+  height: 60px;
+  bottom: 0;
+  border: 0;
+  font-family: "Dosis";
+  font-size: 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.container form button.form-btn.sx {
+  left: 0;
+  border-radius: 0 0 0 5px;
+  background-color: rgba(255, 125, 0, 0.35);
+  color: #fff;
+  transition: all 0.3s linear;
+}
+.container form button.form-btn.sx:hover {
+  background-color: rgba(255, 125, 0, 0.65);
+  color: #fff;
+}
+.container form button.form-btn.sx.back {
+  background-color: rgba(0, 0, 0, 0.15);
+  transition: all 0.3s linear;
+}
+.container form button.form-btn.sx.back:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.container form button.form-btn.dx {
+  right: 0;
+  border-radius: 0 0 5px 0;
+  background-color: #ff7d00;
+  color: #fff;
+}
+.container .signIn {
+  z-index: 1;
+  transform: perspective(100px) translate3d(100px, 0px, -30px);
+  opacity: 0.5;
+}
+.container .signIn input {
+  width: 100%;
+}
+.container .signUp {
+  z-index: 2;
+}
+.container .active-dx {
+  -webkit-animation-name: foregrounding-dx;
+          animation-name: foregrounding-dx;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.container .active-sx {
+  -webkit-animation-name: foregrounding-sx;
+          animation-name: foregrounding-sx;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.container .inactive-dx {
+  -webkit-animation-name: overshadowing-dx;
+          animation-name: overshadowing-dx;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.container .inactive-sx {
+  -webkit-animation-name: overshadowing-sx;
+          animation-name: overshadowing-sx;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes overshadowing-dx {
+  0% {
+    z-index: 2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    z-index: 1;
+    transform: perspective(100px) translate3d(100px, 0px, -30px);
+    opacity: 0.5;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+@keyframes overshadowing-dx {
+  0% {
+    z-index: 2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    z-index: 1;
+    transform: perspective(100px) translate3d(100px, 0px, -30px);
+    opacity: 0.5;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+@-webkit-keyframes overshadowing-sx {
+  0% {
+    z-index: 2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    z-index: 1;
+    transform: perspective(100px) translate3d(-100px, 0px, -30px);
+    opacity: 0.5;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+@keyframes overshadowing-sx {
+  0% {
+    z-index: 2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    z-index: 1;
+    transform: perspective(100px) translate3d(-100px, 0px, -30px);
+    opacity: 0.5;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+@-webkit-keyframes foregrounding-dx {
+  0% {
+    z-index: 1;
+    transform: perspective(100px) translate3d(100px, 0px, -30px);
+    opacity: 0.5;
+  }
+  50% {
+    z-index: 2;
+    transform: perspective(100px) translate3d(400px, 0px, -30px);
+  }
+  100% {
+    z-index: 2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+  }
+}
+@keyframes foregrounding-dx {
+  0% {
+    z-index: 1;
+    transform: perspective(100px) translate3d(100px, 0px, -30px);
+    opacity: 0.5;
+  }
+  50% {
+    z-index: 2;
+    transform: perspective(100px) translate3d(400px, 0px, -30px);
+  }
+  100% {
+    z-index: 2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes foregrounding-sx {
+  0% {
+    z-index: 1;
+    transform: perspective(100px) translate3d(-100px, 0px, -30px);
+    opacity: 0.5;
+  }
+  50% {
+    z-index: 2;
+    transform: perspective(100px) translate3d(-400px, 0px, -30px);
+  }
+  100% {
+    z-index: 2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+  }
+}
+@keyframes foregrounding-sx {
+  0% {
+    z-index: 1;
+    transform: perspective(100px) translate3d(-100px, 0px, -30px);
+    opacity: 0.5;
+  }
+  50% {
+    z-index: 2;
+    transform: perspective(100px) translate3d(-400px, 0px, -30px);
+  }
+  100% {
+    z-index: 2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Dosis";
+  background: #ffc185;
+  width: 100vw;
+  height: 100vh;
+}
+
+::-webkit-input-placeholder {
+  color: #ffc185;
+  font-family: "Roboto";
+  font-weight: 100;
+}
+
+:-moz-placeholder {
+  color: #ffc185;
+  font-family: "Roboto";
+  font-weight: 100;
+}
+
+::-moz-placeholder {
+  color: #ffc185;
+  font-family: "Roboto";
+  font-weight: 100;
+}
+
+:-ms-input-placeholder {
+  color: #ffc185;
+  font-family: "Roboto";
+  font-weight: 100;
+}/*# sourceMappingURL=index.css.map */

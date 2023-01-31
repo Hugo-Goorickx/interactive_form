@@ -1,0 +1,37 @@
+@import "./config_files/default";
+
+details {
+    margin-left: 15vw;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    width: 70vw;
+    border: 1px solid black;
+    summary {
+        font-size:x-large;
+        margin: auto;
+        // width: 80%;
+        margin-left: 10%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .btn {
+            height: 4vh;
+            width: 6vw;
+            border: 0;
+            background-color: $background-color_1;
+            font-family: $font-family_1;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    }
+    p {
+        margin: auto;
+        width: 70%;
+    }
+    span {
+        font-size:large;
+        margin-left: 10%;;
+    }
+    
+}

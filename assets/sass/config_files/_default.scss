@@ -1,0 +1,36 @@
+@import "https://fonts.googleapis.com/css?family=Dosis|Roboto:300,400";
+@import "./keyframes";
+@import "./variables";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $font-family_1;
+	background: #ffc185;
+	width: 100vw;
+	height: 100vh;
+}
+
+::-webkit-input-placeholder {
+	color: $color_5;
+	font-family: $font-family_3;
+	font-weight: 100;
+}
+:-moz-placeholder {
+	color: $color_5;
+	font-family: $font-family_3;
+	font-weight: 100;
+}
+::-moz-placeholder {
+	color: $color_5;
+	font-family: $font-family_3;
+	font-weight: 100;
+}
+:-ms-input-placeholder {
+	color: $color_5;
+	font-family: $font-family_3;
+	font-weight: 100;
+}
